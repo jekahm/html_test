@@ -1,5 +1,16 @@
 @import "var_mixs";
 
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto-Bold.eot');
+  src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf')  format('truetype'),
+        url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 a, button {
   .transition();
 }
@@ -23,6 +34,7 @@ body {
   padding-bottom: 125px;
 }
 
+/*-- Header --*/
 .b-header {
   background-color: #ffffff;
   border-radius: 0;
@@ -80,12 +92,15 @@ body {
   border-radius: 3px;
   box-shadow: inset 0 1px 1px transparent;
 }
+/*-- /Header --*/
 
+/*-- Navigation Bar --*/
 .b-nav {
   &:extend(.b-header);
   padding: 0;
   border: none;
   min-height: auto;
+  position: relative;
 }
 
 .b-nav__cont-fluid {
@@ -114,7 +129,7 @@ body {
   float: none;
 
   a {
-    padding: 14px 27px;
+    padding: 14px 19px;
     font-size: 15px;
     font-weight: bold;
     color: #3C4148 !important;
@@ -130,7 +145,9 @@ body {
     background-color: #3C4148 !important;
   }
 }
+/*-- /Navigation Bar --*/
 
+/*-- Services --*/
 .b-services {
   border-bottom: 1px solid #DBDDDE;
   text-align: center;
@@ -190,7 +207,9 @@ body {
     }
   }
 }
+/*-- /Services --*/
 
+/*-- Slider --*/
 .b-slider {
 
   img {
@@ -204,7 +223,7 @@ body {
 
   .slick-dots {
     position: absolute;
-    bottom: 25px;
+    bottom: 3%;
     display: block;
     width: 100%;
     padding: 0;
@@ -233,6 +252,10 @@ body {
         background: none;
         padding: 0;
         margin: 0;
+
+        &:hover {
+          background-color: rgba(133, 123, 109, 0.7);
+        }
       }
 
       &.slick-active button {
@@ -242,6 +265,46 @@ body {
     }
   }
 }
+
+.b-slider__item {
+  position: relative;
+  border: 0 !important;
+  outline: 0 !important;
+
+  &>div {
+    display: block;
+    position: absolute;
+    left: 108px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    p {
+      display: inline-block;
+      padding: 4px 12px;
+      font: 16px "Roboto-Bold";
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background-color: #F29700;
+    }
+
+    div {
+      font: 57px "Roboto-Bold";
+      color: #FFFFFF;
+      line-height: 0.9;
+    }
+
+    span {
+      display: inline-block;
+      margin-top: 30px;
+      color: #FFFFFF;
+      font: 16px Arial;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+  }
+}
+/*-- /Slider --*/
+
 
 
 

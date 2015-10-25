@@ -3,6 +3,6 @@ $(document).ready(function(){
 		dots: true,
 		speed: 300,
 		autoplay: true,
-		autoplaySpeed: 1500,
+		autoplaySpeed: 7500
 	});
 });

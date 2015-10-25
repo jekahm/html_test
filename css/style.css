@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto-Bold.eot');
+  src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 a,
 button {
   -webkit-transition: all 0.3s ease-out;
@@ -18,6 +25,7 @@ body {
   background-color: #ffffff;
   padding-bottom: 125px;
 }
+/*-- Header --*/
 .b-header,
 .b-nav {
   background-color: #ffffff;
@@ -70,10 +78,13 @@ body {
   border-radius: 3px;
   box-shadow: inset 0 1px 1px transparent;
 }
+/*-- /Header --*/
+/*-- Navigation Bar --*/
 .b-nav {
   padding: 0;
   border: none;
   min-height: auto;
+  position: relative;
 }
 .b-nav__cont-fluid {
   padding: 0;
@@ -98,7 +109,7 @@ body {
   float: none;
 }
 .b-nav__list li a {
-  padding: 14px 27px;
+  padding: 14px 19px;
   font-size: 15px;
   font-weight: bold;
   color: #3C4148 !important;
@@ -111,6 +122,8 @@ body {
   color: #FFFFFF !important;
   background-color: #3C4148 !important;
 }
+/*-- /Navigation Bar --*/
+/*-- Services --*/
 .b-services {
   border-bottom: 1px solid #DBDDDE;
   text-align: center;
@@ -161,6 +174,8 @@ body {
   position: relative;
   margin-top: -23px;
 }
+/*-- /Services --*/
+/*-- Slider --*/
 .b-slider img {
   width: 100%;
   height: auto;
@@ -170,7 +185,7 @@ body {
 }
 .b-slider .slick-dots {
   position: absolute;
-  bottom: 25px;
+  bottom: 3%;
   display: block;
   width: 100%;
   padding: 0;
@@ -200,8 +215,47 @@ body {
   padding: 0;
   margin: 0;
 }
+.b-slider .slick-dots li button:hover {
+  background-color: rgba(133, 123, 109, 0.7);
+}
 .b-slider .slick-dots li.slick-active button {
   background: #F29700;
   border: 1px solid #F29700;
 }
+.b-slider__item {
+  position: relative;
+  border: 0 !important;
+  outline: 0 !important;
+}
+.b-slider__item > div {
+  display: block;
+  position: absolute;
+  left: 108px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.b-slider__item > div p {
+  display: inline-block;
+  padding: 4px 12px;
+  font: 16px "Roboto-Bold";
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #F29700;
+}
+.b-slider__item > div div {
+  font: 57px "Roboto-Bold";
+  color: #FFFFFF;
+  line-height: 0.9;
+}
+.b-slider__item > div span {
+  display: inline-block;
+  margin-top: 30px;
+  color: #FFFFFF;
+  font: 16px Arial;
+  font-weight: bold;
+  line-height: 1.5;
+}
+/*-- /Slider --*/
 /*# sourceMappingURL=../css/style.map */
